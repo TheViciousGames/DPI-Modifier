@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/currentDPITextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current DPI:"
+        android:layout_centerHorizontal="true"
+        android:textSize="23sp"
+        android:layout_marginTop="100dp"
+        />
+    <TextView
+        android:id="@+id/currentDPIValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/currentDPITextView"
+        android:layout_centerHorizontal="true"
+        android:textSize="90sp"
+        android:textStyle="bold"
+
+        />
+    <EditText
+        android:id="@+id/customValueEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/currentDPIValueTextView"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:hint="CUSTOM VALUE"
+        />
+
+    <Button
+        android:id="@+id/testChangeCurrentDpiButton"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/customValueEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Test"
+        android:textSize="18sp"
+        />
+    <Button
+        android:id="@+id/changeCurrentDpiButton"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/testChangeCurrentDpiButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Change"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test button will reset DPI value to default DPI"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        />
+
+
+
+
+
+</RelativeLayout>
