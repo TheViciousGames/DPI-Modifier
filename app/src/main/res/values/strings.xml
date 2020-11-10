@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">DPI Modifier</string>
+    <string name="currentDPI">Current DPI</string>
+    <string name="customValue">CUSTOM VALUE</string>
+    <string name="test">test</string>
+    <string name="change">change</string>
+    <string name="hint">Test button will reset DPI value to last DPI value after 10s\nDo not close the app!!! </string>
+
+
 </resources>

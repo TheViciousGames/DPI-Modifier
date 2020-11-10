@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Button changeCurrentDPIButton,testChangeCurrentDPIButton;
     private TextView currentDPIValueTextView;
     private EditText customDPIValueEditText;
-    private int lastDPIValue,customDPIValue;
+    private int lastDPIValue,customDPIValue=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +42,14 @@ public class MainActivity extends AppCompatActivity {
         changeCurrentDPIButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Tools.setDPI(customDPIValue);
-            }
+
+               if(customDPIValueEditText.getText().length()>0)
+               {
+                   customDPIValue= Integer.parseInt(String.valueOf(customDPIValueEditText.getText()));
+                   Tools.setDPI(customDPIValue);
+               }
+
+             }
         });
 
         testChangeCurrentDPIButton.setOnClickListener(new View.OnClickListener() {
@@ -52,17 +58,18 @@ public class MainActivity extends AppCompatActivity {
                 lastDPIValue=Tools.getDPI(MainActivity.this);
                 customDPIValue= Integer.parseInt(String.valueOf(customDPIValueEditText.getText()));
                 Tools.setDPI(customDPIValue);
+
                 new Timer().schedule(new TimerTask() {
                     @Override
                     public void run() {
                         Tools.setDPI(lastDPIValue);
                     }
-                }, 5000);
+                }, 10000);
             }
-        });
-    }
+        });}
     protected void getInfo()
     {
         currentDPIValueTextView.setText(""+Tools.getDPI(this));
+        customDPIValue=Tools.getDPI(this);
     }
 }

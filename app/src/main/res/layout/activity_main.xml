@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#ffd300">
 
     <TextView
         android:id="@+id/currentDPITextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Current DPI:"
+        android:text="@string/currentDPI"
         android:layout_centerHorizontal="true"
         android:textSize="23sp"
         android:layout_marginTop="100dp"
+        android:textColor="#000000"
         />
     <TextView
         android:id="@+id/currentDPIValueTextView"
@@ -23,6 +24,7 @@
         android:layout_centerHorizontal="true"
         android:textSize="90sp"
         android:textStyle="bold"
+        android:textColor="#000000"
 
         />
     <EditText
@@ -32,8 +34,10 @@
         android:layout_below="@id/currentDPIValueTextView"
         android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
-        android:hint="CUSTOM VALUE"
-        />
+        android:hint="@string/customValue"
+        android:inputType="number"
+        android:importantForAutofill="no"
+        android:textColor="#000000"/>
 
     <Button
         android:id="@+id/testChangeCurrentDpiButton"
@@ -42,8 +46,10 @@
         android:layout_below="@id/customValueEditText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Test"
+        android:text="@string/test"
         android:textSize="18sp"
+        android:background="#8B4513"
+        android:textColor="#ffd300"
         />
     <Button
         android:id="@+id/changeCurrentDpiButton"
@@ -52,18 +58,24 @@
         android:layout_below="@id/testChangeCurrentDpiButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Change"
+        android:text="@string/change"
         android:textSize="18sp"
+        android:background="#8B4513"
+        android:textColor="#ffd300"
         />
     <TextView
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/changeCurrentDpiButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Test button will reset DPI value to default DPI"
-        android:textSize="17sp"
+        android:text="@string/hint"
+        android:textSize="15sp"
         android:textStyle="bold"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-
+        android:paddingEnd="30dp"
+        android:paddingStart="30dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
         />
 
 
